@@ -20,7 +20,10 @@ Trade-off between normalized predictive performance (AUC) and normalized confide
 
 ## Getting Started
 
-### 1. Create an environment
+###  Benchmark Datasets
+Datasets are available at <a href="https://drive.google.com/drive/folders/1j1zt3zQIo8dO6vkO-K-WE6pSrl71bf0z?usp=drive_link">Google Drive</a>, please refer to TALENT benchmark [1].
+
+### Create an environment
 ```bash
 python -m venv .venv
 source .venv/bin/activate
@@ -28,10 +31,10 @@ pip install --upgrade pip
 pip install -r requirements.txt
 ```
 
-### 2. Download TALENT datasets
+### Download TALENT datasets
 Place the TALENT dataset folders under `./data` (default) or point the CLI to a different location with `--dataset-path`.
 
-### 3. Run the benchmark
+### Run the benchmark
 ```bash
 python talent_benchmark.py \
   --datasets KDDCup09_upselling heloc \
@@ -43,19 +46,8 @@ python talent_benchmark.py \
 
 Results are written to `results_talent/<DATE>/talent_benchmark_seed_<SEED>_<DATE>.csv` and mirrored to Weights & Biases when enabled.
 
-## Command-line Reference
+### References
 
-Run `python talent_benchmark.py --help` for the full list. Highlights:
-
-| Flag | Description |
-| --- | --- |
-| `--datasets / --models` | Lists of TALENT dataset names and model identifiers. |
-| `--dataset-path` | Root folder containing preprocessed TALENT datasets. |
-| `--dataset-summary` | CSV with metadata per dataset (`datasets_summary_talent.csv` by default). |
-| `--confidence-level` | Target coverage for MAPIE prediction sets. |
-| `--conformity-score` | One or more conformity scores (`lac`, `top_k`, `aps`, `raps`). Binary datasets automatically fall back to `lac`. |
-| `--n-seeds` | Number of random seeds per dataset/model combination. |
-| `--n-trials` | Optuna trials used during TALENT's HPO stage. Ignored in mock mode. |
-| `--output-dir` | Directory used for CSV outputs and logs (`results_talent`). |
-| `--mock-run` | Enables the faster smoke-test mode. |
-| `--disable-wandb` | Skip Weights & Biases even if the project/entity flags are set. |
+[1] Liu, S.-Y., Cai, H.-R., Zhou, Q.-L., & Ye, H.-J. (2024).
+TALENT: A Tabular Analytics and Learning Toolbox. Retrieved from https://arxiv.org/abs/2407.04057
+https://github.com/LAMDA-Tabular/TALENT
