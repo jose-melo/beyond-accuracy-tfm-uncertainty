@@ -1,0 +1,14 @@
+{
+    "catboost": {
+        "cat_policy": "indices",
+        "fit": {
+            "logging_level": "Silent",
+            "n_bins": 2
+        },
+        "model": {
+            "early_stopping_rounds": 50,
+            "n_estimators": 2000,
+            "od_pval": 0.001
+        }
+    }
+}

@@ -1,0 +1,16 @@
+{
+    "tabautopnpnet": {
+        "model": {
+            "num_fourier_features": 100,
+            "max_poly_terms": 5,
+            "poly_type": "chebyshev",
+            "hidden_size": 256,
+            "use_residual": true
+        },
+        "training": {
+            "lr": 0.05,
+            "weight_decay": 0.001
+        },
+        "general": {}
+    }
+}

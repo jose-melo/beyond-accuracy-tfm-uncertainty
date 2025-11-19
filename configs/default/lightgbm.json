@@ -1,0 +1,10 @@
+{
+    "lightgbm": {
+        "model": {
+            "n_estimators": 2000
+        },
+        "fit": {
+            "n_bins": 2
+        }
+    }
+}

@@ -1,0 +1,11 @@
+{
+    "PFN-v2": {
+        "normalization": "none",
+        "cat_policy": "indices",
+        "model": {},
+        "training": {},
+        "general": {
+            "sample_size": 10000
+        }
+    }
+}

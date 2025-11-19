@@ -1,0 +1,9 @@
+{
+    "tabicl": {
+        "normalization": "none",
+        "cat_policy": "indices",
+        "model": {},
+        "training": {},
+        "general": {}
+    }
+}

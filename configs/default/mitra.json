@@ -1,0 +1,12 @@
+{
+    "mitra": {
+        "normalization": "none",
+        "cat_policy": "indices",
+        "model": {},
+        "training": {},
+        "general": {
+            "max_samples_support": 8192,
+            "max_samples_query": 1024
+        }
+    }
+}
