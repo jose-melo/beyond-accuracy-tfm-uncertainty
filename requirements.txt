@@ -13,6 +13,7 @@ skrub>=0.2
 mapie>=0.7
 tabpfn>=0.1
 tabicl>=0.1
-tabm>=0.1
-rtdl-num-embeddings>=1.0
-pytorch-lightning>=2.0
+tabm
+rtdl-num-embeddings
+pytorch-lightning
+category_encoders
