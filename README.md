@@ -1,6 +1,22 @@
+
+
 # Beyond Accuracy: A Comprehensive Benchmark of Uncertainty in Tabular Foundation Models
 
-Recent Tabular Foundation Models (TFMs) have demonstrated state-of-the-art predictive performance, often surpassing Gradient-Boosted Decision Trees (GBDTs). However, the trustworthiness of these models, particularly their uncertainty quantification, has been largely overlooked. We investigate this gap through an extensive study comparing TFMs, GBDTs, and classical baselines on the 112 datasets of the TALENT benchmark. Our findings expose a critical trade-off: while TFMs consistently lead in predictive accuracy (AUC score), they exhibit significantly poorer stability under prediction confidence compared to GBDTs. Complementary experiments on synthetic datasets further characterize the regimes in which this effect intensifies. We conclude that while TFMs advance predictive frontiers, achieving well-calibrated uncertainty remains a major open challenge for the current generation of these models. Code is available at: \todo{add code link
+Recent Tabular Foundation Models (TFMs) have set new standards in predictive performance on tabular data, frequently outperforming Gradient-Boosted Decision Trees (GBDTs). However, their uncertainty quantification, a key aspect of model trustworthiness, has received far less attention.
+
+This repository investigates that gap through an extensive comparison of TFMs, GBDTs, and classical baselines on the 112 datasets of the TALENT benchmark.
+
+<p align="center">
+<img width="600" alt="benchmarkinTFMs" src="https://github.com/user-attachments/assets/f3a931ff-d6c1-4b3c-bfd5-705e2cc6a8b0" />
+</p>
+
+### Model Performance Summary
+
+Trade-off between normalized predictive performance (AUC) and normalized confidence (SSCS). The dashed curve indicates the trade-off: higher AUC and higher SSCS jointly indicate accurate and trustworthy models.
+
+<p align="center">
+<img width="600" alt="tradeoff-image" src="https://github.com/user-attachments/assets/065b74a9-7bc6-4885-a3ea-db92a9478d13" />
+</p>
 
 ## Getting Started
 
@@ -43,12 +59,3 @@ Run `python talent_benchmark.py --help` for the full list. Highlights:
 | `--output-dir` | Directory used for CSV outputs and logs (`results_talent`). |
 | `--mock-run` | Enables the faster smoke-test mode. |
 | `--disable-wandb` | Skip Weights & Biases even if the project/entity flags are set. |
-
-## Repository Structure
-```
-configs/                 # TALENT model defaults and hyper-parameter spaces
-model/                   # TALENT model implementations and utilities
-talent_benchmark.py      # Entry point to execute the benchmark
-utils.py                 # Shared helpers (dataset prep, Optuna tuning, evaluation)
-requirements.txt         # Python dependencies
-```
