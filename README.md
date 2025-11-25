@@ -1,6 +1,6 @@
 
 
-# Beyond Accuracy: A Comprehensive Benchmark of Uncertainty in Tabular Foundation Models
+# High Performance, Low Reliability: Uncertainty Benchmarking for Tabular Foundation Models
 
 Recent Tabular Foundation Models (TFMs) have set new standards in predictive performance on tabular data, frequently outperforming Gradient-Boosted Decision Trees (GBDTs). However, their uncertainty quantification, a key aspect of model trustworthiness, has received far less attention.
 
